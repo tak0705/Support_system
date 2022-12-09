@@ -11,7 +11,6 @@
             type="file"
             accept="text/csv"
             class="form-control"
-            font-size="22px"
             (change)="onFileChange($event)">
     
       <div *ngIf="f['file'].touched && f['file'].invalid" class="alert alert-danger">

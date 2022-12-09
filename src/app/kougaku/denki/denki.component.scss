@@ -1,5 +1,7 @@
 p {
     white-space: pre-line;
+    text-align: left;
+    font-weight: 540;
   }
 
 body {
@@ -22,7 +24,7 @@ h1 {
    }
 h3 {
       text-align: center;
-      color: rgb(0, 0, 255);
+      color: #364e96;
    }
 h4 {
     text-align: center;
@@ -30,9 +32,25 @@ h4 {
    }
 button {
     width: 5em;
-    height: 2.5em;
+    height: 2em;
     font-size: 15pt;
   }
 input{
     font-size: 100%;
+  }
+.btn-circle-flat {
+    display: inline-block;
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 90px;
+    height: 90px;
+    line-height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+  }
+.btn-circle-flat:hover {
+    background: #668ad8;
   }

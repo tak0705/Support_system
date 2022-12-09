@@ -1,7 +1,7 @@
 <h4>--------------------------------------------------</h4>
 <div class="container">
     <h3>電気電子工学コース用</h3>
-    <p>成績のCSVファイルを入力してください</p>
+    <h5>成績のCSVファイルを入力してください</h5>
     
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="form-group">
@@ -17,11 +17,10 @@
             <div *ngIf="f['file'].errors?.['required']">File is required.</div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit" onclick="setTimeout(()=>disabled=true,0)">Submit</button>
+        <p></p>
+        <button class="btn btn-circle-flat" type="submit" onclick="setTimeout(()=>disabled=true,0)">Submit</button>
     </form>
     
-    <h2>3年進級要件</h2>
-    <p></p>
     <h2>4年進級要件</h2>
     <p>教養教育科目: {{cnt_edu}} / 23単位以上
        &nbsp;&nbsp; 人文科学系: {{cnt_edu_jin}} / 4単位以上</p>

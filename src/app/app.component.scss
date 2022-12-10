@@ -34,3 +34,43 @@ h1 {
 .center{
     text-align: center;
 }
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+   body {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+   }
+   .full-page {
+      width: 320px;
+      height: 480px;
+      background-color: rgb(232, 231, 231);
+   }
+   h1 {
+       font-size: 45px;
+       display: inline-block;
+       color: #b70303;/*文字色*/
+       padding: 0.5em 0;/*上下の余白*/
+       border-top: 2px solid #b70303;/*上線*/
+       border-bottom: 2px solid #b70303;/*下線*/
+    }
+    h2 {
+       display: inline-block;
+       width: 200px;
+       color: #364e96;/*文字色*/
+       border: solid 3px #364e96;/*線色*/
+       padding: 0.5em;/*文字周りの余白*/
+       border-radius: 0.5em;/*角丸*/
+    }
+    h3 {
+       text-align: center;
+    }
+    p {
+       font-size: 30px;
+       text-align: center;
+    }
+   .center{
+       text-align: center;
+   }
+}

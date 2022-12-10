@@ -54,3 +54,64 @@ input{
 .btn-circle-flat:hover {
   background: #668ad8;
 }
+
+@media screen and (max-width: 480px) {
+
+  p {
+    white-space: pre-line;
+    text-align: left;
+    font-weight: 540;
+    font-size: 13.49px;
+  }
+
+body {
+       background-color: rgba(0, 195, 255, 0.5);
+  }
+
+.container {
+      //font-family: arial;
+      font-size: 22px;
+      margin: auto;
+      width: 390px;
+      //height: 70px;
+      //outline: dashed 1px rgb(4, 24, 245);
+    }
+    
+h1 {
+      text-align: center;
+      font-size: 45px;
+      color: rgb(255, 21, 0);
+   }
+h3 {
+      text-align: center;
+      color: #364e96;
+   }
+h4 {
+    text-align: center;
+    font-size: 18px;
+   }
+button {
+  width: 5em;
+  height: 2em;
+  font-size: 15pt;
+}
+input{
+  font-size: 100%;
+}
+.btn-circle-flat {
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 90px;
+  height: 90px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+.btn-circle-flat:hover {
+  background: #668ad8;
+}
+}

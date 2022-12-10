@@ -43,12 +43,12 @@ h1 {
       padding: 0;
    }
    .full-page {
-      width: 700px;
-      height: 2000px;
+      width: 410px;
+      height: 1500px;
       background-color: rgb(232, 231, 231);
    }
    h1 {
-       font-size: 45px;
+       font-size: 32px;
        display: inline-block;
        color: #b70303;/*文字色*/
        padding: 0.5em 0;/*上下の余白*/
@@ -57,11 +57,12 @@ h1 {
     }
     h2 {
        display: inline-block;
-       width: 200px;
+       width: 130px;
        color: #364e96;/*文字色*/
        border: solid 3px #364e96;/*線色*/
-       padding: 0.5em;/*文字周りの余白*/
+       padding: 0.4em;/*文字周りの余白*/
        border-radius: 0.5em;/*角丸*/
+       font-size: 15px;
     }
     h3 {
        text-align: center;
@@ -72,5 +73,8 @@ h1 {
     }
    .center{
        text-align: center;
+   }
+   a{
+      font-size: 15px;
    }
 }

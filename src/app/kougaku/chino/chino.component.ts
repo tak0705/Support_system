@@ -25,6 +25,7 @@ export class ChinoComponent implements OnInit {
 
   cnt_spe = 0;
   cnt_fre = 0;
+  cnt_chiki =0;
 
   constructor(private fb: FormBuilder) {
   }
@@ -71,6 +72,24 @@ export class ChinoComponent implements OnInit {
               this.cnt_spe -= ( this.lineArr[i].match( /工学倫理/ ) && this.lineArr[i].match( /合/ ) || []).length;
 
               this.cnt_fre += 2*(( this.lineArr[i].match( /自由選択科目/ ) && this.lineArr[i].match( /合/ ) || []).length);
+              this.cnt_chiki += 2*((( this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /言語と文化/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /地域ライフプラン/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /日本の歴史と社会/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /富山のものづくり概論/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /富山の地域づくり/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /環日本海/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /現代社会論/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /地球と環境/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /地域の経済と社会・文化/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /環境/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /人権と福祉/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /医療と地域社会/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /ビジネス思考/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /産業観光学/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /人間と福祉/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /日本海学/ ))
+              || (this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /アカデミック・デザイン/ ))
+              && this.lineArr[i].match( /合/ ) || []).length);
               }
               
               resolve(reader.result as string);

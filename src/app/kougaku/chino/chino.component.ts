@@ -79,8 +79,34 @@ export class ChinoComponent implements OnInit {
 
               this.cnt_spe += 2*(( this.lineArr[i].match( /専門教育科目/ ) && this.lineArr[i].match( /合/ ) || []).length);
               this.cnt_spe -= ( this.lineArr[i].match( /共通専門科目/ ) && this.lineArr[i].match( /合/ ) || []).length;
-              this.cnt_spe -= ( this.lineArr[i].match( /知的財産/ ) && this.lineArr[i].match( /合/ ) || []).length;
-              this.cnt_spe -= ( this.lineArr[i].match( /工学倫理/ ) && this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_kyouki_hi+= ( this.lineArr[i].match( /知的財産/ ) && this.lineArr[i].match(/必修/)&& this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_courseki_hi+= 2*( this.lineArr[i].match( /創造工学入門ゼミナール/ ) && this.lineArr[i].match(/必修/) && this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_kyo_co_hi=this.cnt_spe_kyouki_hi+this.cnt_spe_courseki_hi;
+              this.cnt_spe_senhi_group1+= 2*( this.lineArr[i].match( /微分積分Ⅰ/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi_group1+= 2*( this.lineArr[i].match( /線形代数Ⅰ/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi_group1+= 2*( this.lineArr[i].match( /基礎物理学(A)/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi_group1+= 2*( this.lineArr[i].match( /基礎化学(C)/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi_group1+= 2*( this.lineArr[i].match( /基礎生物学(A)/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+
+              this.cnt_spe_senhi_group2+= 2*( this.lineArr[i].match( /実践英語コミュニケーション/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi_group2+= 2*( this.lineArr[i].match( /工業英語/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_kyou_sen+=( this.lineArr[i].match( /共通専門科目/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_kyou_sen+=( this.lineArr[i].match( /社会中核人材育成学/ ) &&  this.lineArr[i].match( /合/ ) || []).length;
+
+              this.cnt_spe_senhi_group3+= 2*( this.lineArr[i].match( /データサイエンスⅠ/ ) && this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi_group3+= 2*( this.lineArr[i].match( /データサイエンスⅡ/ ) && this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi_group3+= 2*( this.lineArr[i].match( /コース基礎科目/ ) && this.lineArr[i].match(/選択必修/) && this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_senhi=this.cnt_spe_senhi_group1+this.cnt_spe_senhi_group2+this.cnt_spe_senhi_group3;
+
+              this.cnt_spe_courseki_sen+= 2*( this.lineArr[i].match( /コース基礎科目/ ) && this.lineArr[i].match(/選択/) && this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_courseki_sen-= 2*( this.lineArr[i].match( /コース基礎科目/ ) && this.lineArr[i].match(/選択必修/) && this.lineArr[i].match( /合/ ) || []).length;
+
+              this.cnt_spe_coursesen_hi+= 2*( this.lineArr[i].match( /コース専門科目/ ) && this.lineArr[i].match(/必修/) && this.lineArr[i].match( /合/ ) || []).length;
+              this.cnt_spe_coursesen_hi-= ( this.lineArr[i].match( /工学倫理/ ) && this.lineArr[i].match( /合/ ) || []).length;
+
+              this.cnt_spe_coursesen_sen+= 2*( this.lineArr[i].match( /コース専門科目/ ) && this.lineArr[i].match(/選択/) && this.lineArr[i].match( /合/ ) || []).length;
+              
+              this.cnt_spe=this.cnt_spe_kyo_co_hi+this.cnt_spe_senhi+this.cnt_spe_courseki_sen+this.cnt_spe_coursesen_hi+this.cnt_spe_coursesen_sen+this.cnt_spe_kyou_sen;
 
               this.cnt_fre += 2*(( this.lineArr[i].match( /自由選択科目/ ) && this.lineArr[i].match( /合/ ) || []).length);
               this.cnt_chiki += 2*((( this.lineArr[i].match( /教養教育科目/ ) &&this.lineArr[i].match( /言語と文化/ ))

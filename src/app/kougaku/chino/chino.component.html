@@ -112,9 +112,9 @@
 <p *ngIf="cnt_spe < 80">専門教育科目: <span style="color:red">{{cnt_spe}}</span> /80単位以上</p>
 
 <p *ngIf="cnt_spe_coursesen_hi+cnt_spe_coursesen_sen >=58">
-   &nbsp;&nbsp;&nbsp;&nbsp;・コース専門科目: {{cnt_spe_coursesen_hi+cnt_spe_coursesen_sen}} / 58単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;・専門科目: {{cnt_spe_coursesen_hi+cnt_spe_coursesen_sen}} / 58単位以上</p>
 <p *ngIf="cnt_spe_coursesen_hi+cnt_spe_coursesen_sen < 58">
-   &nbsp;&nbsp;&nbsp;&nbsp;・コース専門科目: <span style="color:red">{{cnt_spe_coursesen_hi+cnt_spe_coursesen_sen}}</span> / 58単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;・専門科目: <span style="color:red">{{cnt_spe_coursesen_hi+cnt_spe_coursesen_sen}}</span> / 58単位以上</p>
 <p *ngIf="cnt_spe_coursesen_hi >=14">
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;必修科目: {{cnt_spe_coursesen_hi}} / 14単位</p>
@@ -129,9 +129,9 @@
    &nbsp;選択科目: <span style="color:red">{{cnt_spe_coursesen_sen}}</span> / 44単位以上</p>
 
 <p *ngIf="cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen >=22">
-   &nbsp;&nbsp;&nbsp;&nbsp;・共通,コース基礎科目: {{cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen}} / 22単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;・基礎科目: {{cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen}} / 22単位以上</p>
 <p *ngIf="cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen < 22">
-   &nbsp;&nbsp;&nbsp;&nbsp;・共通,コース基礎科目: <span style="color:red">{{cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen}}</span> / 22単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;・基礎科目: <span style="color:red">{{cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen}}</span> / 22単位以上</p>
 <p *ngIf="cnt_spe_kyo_co_hi >=3">&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必修（知的財産、創造ゼミ）: {{cnt_spe_kyo_co_hi}} / 3単位</p>
 <p *ngIf="cnt_spe_kyo_co_hi < 3">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -153,11 +153,11 @@
 <p *ngIf="cnt_spe_senhi_group2 < 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選択必修（英語系）: <span style="color:red">{{cnt_spe_senhi_group2}}</span> / 2単位以上</p>
 <p *ngIf="cnt_spe_senhi_group3 >=2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選択必修（プログラミング系）: {{cnt_spe_senhi_group3}} / 2単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選択必修（データサイエンス、PG）: {{cnt_spe_senhi_group3}} / 2単位以上</p>
 <p *ngIf="cnt_spe_senhi_group3 < 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選択必修（プログラミング系）: <span style="color:red">{{cnt_spe_senhi_group3}}</span> / 2単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選択必修（データサイエンス、PG）: <span style="color:red">{{cnt_spe_senhi_group3}}</span> / 2単位以上</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;・共通専門科目の選択: {{cnt_spe_kyou_sen}}</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;・共通専門科目: {{cnt_spe_kyou_sen}}</p>
 
 <p>自由選択科目: {{cnt_fre}} / 10単位以内</p>
 <p *ngIf="cnt_edu + cnt_spe + cnt_fre >= 113">総取得単位数: {{cnt_edu + cnt_spe + cnt_fre}} / 113以上</p>

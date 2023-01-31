@@ -24,93 +24,92 @@
     </form>
     
     <h2>4年進級要件</h2>
+
 <p *ngIf="cnt_edu >= 23">教養教育科目: {{cnt_edu}} / 23単位以上</p>
+<p *ngIf="cnt_edu < 23">教養教育科目: <span style="color:red">{{cnt_edu}}</span> / 23単位以上</p>
 <p *ngIf="cnt_edu_jin >= 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 人文科学系: {{cnt_edu_jin}} / 4単位以上</p>
-<p *ngIf="cnt_edu < 23">教養教育科目: <span style="color:red">{{cnt_edu}}</span> / 23単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   人文科学系: {{cnt_edu_jin}} / 4単位以上</p>
 <p *ngIf="cnt_edu_jin < 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 人文科学系: <span style="color:red">{{cnt_edu_jin}}</span> / 4単位以上</p>
-<p *ngIf="cnt_edu_sya >= 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;社会科学系: {{cnt_edu_sya}} / 4単位以上</p>
-<p *ngIf="cnt_edu_sya < 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;社会科学系: <span style="color:red">{{cnt_edu_sya}}</span> / 4単位以上</p>
-<p *ngIf="cnt_edu_jin + cnt_edu_sya >= 12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人文＋社会: {{cnt_edu_jin + cnt_edu_sya}} / 12単位以上</p>
-<p *ngIf="cnt_edu_jin + cnt_edu_sya < 12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人文＋社会: <span style="color:red">{{cnt_edu_jin + cnt_edu_sya}}</span> / 12単位以上</p>
-<p *ngIf="cnt_chiki >= 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地域志向科目: {{cnt_chiki}} / 2単位以上</p>
-<p *ngIf="cnt_chiki < 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地域志向科目: <span style="color:red">{{cnt_chiki}}</span> / 2単位以上</p>
-   <p></p>
-<p *ngIf="cnt_edu_sou > 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;総合科目系: {{cnt_edu_sou}} / 4単位以上</p>
-<p *ngIf="cnt_edu_sou > 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;総合科目系: <span style="color:red">{{cnt_edu_sou}}</span> / 4単位以上</p>
-<p *ngIf="cnt_edu_gai >= 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;　外国語系: {{cnt_edu_gai}} / 4単位以上</p>
-<p *ngIf="cnt_edu_gai < 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;　外国語系: <span style="color:red">{{cnt_edu_gai}}</span> / 4単位以上</p>
-<p *ngIf="cnt_edu_hoken >= 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;保健体育系: {{cnt_edu_hoken}} / 1単位以上</p>
-<p *ngIf="cnt_edu_hoken < 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;保健体育系: <span style="color:red">{{cnt_edu_hoken}}</span> / 1単位以上</p>
-<p *ngIf="cnt_edu_jyou >= 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;情報処理系: {{cnt_edu_jyou}} / 2単位以上</p>
-<p *ngIf="cnt_edu_jyou < 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;情報処理系: <span style="color:red">{{cnt_edu_jyou}}</span> / 2単位以上</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   人文科学系: <span style="color:red">{{cnt_edu_jin}}</span> / 4単位以上</p>
+<p *ngIf="cnt_edu_sya >= 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   社会科学系: {{cnt_edu_sya}} / 4単位以上</p>
+<p *ngIf="cnt_edu_sya < 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   社会科学系: <span style="color:red">{{cnt_edu_sya}}</span> / 4単位以上</p>
+<p *ngIf="cnt_edu_jin + cnt_edu_sya >= 12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   人文＋社会: {{cnt_edu_jin + cnt_edu_sya}} / 12単位以上</p>
+<p *ngIf="cnt_edu_jin + cnt_edu_sya < 12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   人文＋社会: <span style="color:red">{{cnt_edu_jin + cnt_edu_sya}}</span> / 12単位以上</p>
+<p *ngIf="cnt_chiki >= 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   地域志向科目: {{cnt_chiki}} / 2単位以上</p>
+<p *ngIf="cnt_chiki < 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   地域志向科目: <span style="color:red">{{cnt_chiki}}</span> / 2単位以上</p>
+<p *ngIf="cnt_edu_sou > 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   総合科目系: {{cnt_edu_sou}} / 4単位以上</p>
+<p *ngIf="cnt_edu_sou > 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   総合科目系: <span style="color:red">{{cnt_edu_sou}}</span> / 4単位以上</p>
+<p *ngIf="cnt_edu_gai >= 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   外国語系: {{cnt_edu_gai}} / 4単位以上</p>
+<p *ngIf="cnt_edu_gai < 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   外国語系: <span style="color:red">{{cnt_edu_gai}}</span> / 4単位以上</p>
+<p *ngIf="cnt_edu_hoken >= 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   保健体育系: {{cnt_edu_hoken}} / 1単位以上</p>
+<p *ngIf="cnt_edu_hoken < 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   保健体育系: <span style="color:red">{{cnt_edu_hoken}}</span> / 1単位以上</p>
+<p *ngIf="cnt_edu_jyou >= 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   情報処理系: {{cnt_edu_jyou}} / 2単位以上</p>
+<p *ngIf="cnt_edu_jyou < 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   情報処理系: <span style="color:red">{{cnt_edu_jyou}}</span> / 2単位以上</p>
 
 <p *ngIf="cnt_spe >=80">専門教育科目: {{cnt_spe}} /80単位以上</p>
 <p *ngIf="cnt_spe < 80">専門教育科目: <span style="color:red">{{cnt_spe}}</span> /80単位以上</p>
-
 <p *ngIf="cnt_spe_coursesen_hi+cnt_spe_coursesen_sen >=58">
    &nbsp;&nbsp;&nbsp;&nbsp;・専門科目: {{cnt_spe_coursesen_hi+cnt_spe_coursesen_sen}} / 58単位以上</p>
 <p *ngIf="cnt_spe_coursesen_hi+cnt_spe_coursesen_sen < 58">
@@ -127,7 +126,6 @@
 <p *ngIf="cnt_spe_coursesen_sen < 44">
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;選択科目: <span style="color:red">{{cnt_spe_coursesen_sen}}</span> / 44単位以上</p>
-
 <p *ngIf="cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen >=22">
    &nbsp;&nbsp;&nbsp;&nbsp;・基礎科目: {{cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen}} / 22単位以上</p>
 <p *ngIf="cnt_spe_kyo_co_hi+cnt_spe_senhi+cnt_spe_courseki_sen < 22">
@@ -156,15 +154,15 @@
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選択必修（データサイエンス、PG）: {{cnt_spe_senhi_group3}} / 2単位以上</p>
 <p *ngIf="cnt_spe_senhi_group3 < 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;選択必修（データサイエンス、PG）: <span style="color:red">{{cnt_spe_senhi_group3}}</span> / 2単位以上</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;・共通専門科目: {{cnt_spe_kyou_sen}}</p>
-
 <p>自由選択科目: {{cnt_fre}} / 10単位以内</p>
 <p *ngIf="cnt_edu + cnt_spe + cnt_fre >= 113">総取得単位数: {{cnt_edu + cnt_spe + cnt_fre}} / 113以上</p>
 <p *ngIf="cnt_edu + cnt_spe + cnt_fre < 113">総取得単位数: <span style="color:red">{{cnt_edu + cnt_spe + cnt_fre}}</span> / 113以上</p>
     
-    <h2>卒業要件</h2>
-    <p *ngIf="cnt_edu >= 23">教養教育科目: {{cnt_edu}} / 23単位以上</p>
+<p></p>
+<p></p>
+<h2>卒業要件</h2>
+<p *ngIf="cnt_edu >= 23">教養教育科目: {{cnt_edu}} / 23単位以上</p>
 <p *ngIf="cnt_edu < 23">教養教育科目: <span style="color:red">{{cnt_edu}}</span> / 23単位以上</p>
 <p></p>
 <p *ngIf="cnt_spe >= 91">専門教育科目: {{cnt_spe}} / 91単位以上</p>

@@ -23,8 +23,7 @@
         <button class="btn btn-circle-flat" type="submit" onclick="setTimeout(()=>disabled=true,0)">Submit</button>
     </form>
     
-    <h2>4年進級要件</h2>
-
+<h2>4年進級要件</h2>
 <p *ngIf="cnt_edu >= 23">教養教育科目: {{cnt_edu}} / 23単位以上</p>
 <p *ngIf="cnt_edu < 23">教養教育科目: <span style="color:red">{{cnt_edu}}</span> / 23単位以上</p>
 <p *ngIf="cnt_edu_jin >= 4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

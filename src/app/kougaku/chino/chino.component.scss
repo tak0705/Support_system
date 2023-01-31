@@ -3,6 +3,12 @@ p {
     text-align: left;
     font-weight: 540;
   }
+  
+p1 {
+    white-space: pre-line;
+    text-align: left;
+    font-weight: 540;
+  }
 
 body {
       margin: 0;
@@ -33,6 +39,10 @@ h3 {
 h4 {
     text-align: center;
     font-size: 28px;
+   }
+h6 {
+    text-align: left;
+    font-size: 25px;
    }
 button {
   width: 5em;

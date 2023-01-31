@@ -24,19 +24,19 @@ export class ChinoComponent implements OnInit {
   cnt_edu_jyou = 0;
 
   cnt_spe = 0;
-  cnt_spe_kyouki_hi=0;
-  cnt_spe_courseki_hi=0;
-  cnt_spe_kyo_co_hi=0;//共基＋コース基の必修
-  cnt_spe_senhi_group1=0;//数学系
-  cnt_spe_senhi_group2=0;//英語系
-  cnt_spe_senhi_group3=0;//データサイエンス、プログラミング系
-  cnt_spe_senhi=0;
-  cnt_spe_courseki_sen=0;
-  cnt_spe_coursesen_hi=0;
-  cnt_spe_coursesen_sen=0;
-  cnt_spe_kyou_sen=0;
+  cnt_spe_kyouki_hi = 0;
+  cnt_spe_courseki_hi = 0;
+  cnt_spe_kyo_co_hi = 0;//共基＋コース基の必修
+  cnt_spe_senhi_group1 = 0;//数学系
+  cnt_spe_senhi_group2 = 0;//英語系
+  cnt_spe_senhi_group3 = 0;//データサイエンス、プログラミング系
+  cnt_spe_senhi = 0;
+  cnt_spe_courseki_sen = 0;
+  cnt_spe_coursesen_hi = 0;
+  cnt_spe_coursesen_sen = 0;
+  cnt_spe_kyou_sen = 0;
   cnt_fre = 0;
-  cnt_chiki =0;
+  cnt_chiki = 0;
 
   constructor(private fb: FormBuilder) {
   }
